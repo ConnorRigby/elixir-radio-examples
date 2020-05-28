@@ -65,7 +65,7 @@ defmodule Radio.Component.RadioNode do
     |> text("#{node_id}", translate: {20, 30})
   end
 
-  defp add_node_id(graph, %Packet{sender_id: node_id}, _id) when node_id < 100 do
+  defp add_node_id(graph, %Packet{sender_id: node_id}, _id) do
     graph
     |> rrect({50, 50, 20}, fill: :grey)
     |> text("#{node_id}", translate: {15, 30})
