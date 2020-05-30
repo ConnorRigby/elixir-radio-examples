@@ -79,6 +79,7 @@ void check_radio(void)                                // Receiver role: Does not
     // Read in the data
     uint8_t received;
     radio.read(&received,sizeof(received));
+    Serial.println(received, HEX);
 
     // If this is a ping, send back a pong
     if(received == ping){
